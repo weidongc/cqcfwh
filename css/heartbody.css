@@ -1,0 +1,321 @@
+/*banner*/
+div#banner_box{
+    background-image: url("../images/banner.jpg");
+    margin-top:30px;
+    width: 100%;
+    height: 620px;
+}
+
+div#banner{
+    width: 1200px;
+    margin:0 auto;
+}
+
+div#banner p{
+    padding-top:38px;
+}
+
+div#banner>p>img{
+    margin:0 auto;
+}
+
+div#banner h1{
+    padding-top:62px;
+}
+
+div#banner>h1>img{
+    margin:0 auto;
+}
+
+div#banner h2{
+    padding-top:34px;
+}
+
+div#banner>h2>img{
+    margin:0 auto;
+}
+
+div#banner h3{
+    font-family: "微软雅黑";
+    font-size:30px;
+    color:#e09e10;
+    margin:46px 0 0 140px;
+    font-weight: bold;
+}
+
+div#banner h4{
+    font-size:18px;
+    font-family:"微软雅黑";
+    color:#0ca776;
+    margin:26px 0 0 140px;
+    font-weight: bold;
+}
+
+/*小banner*/
+div#small_banner{
+    background:url("../images/banner2.jpg") center top;
+    width: 100%;
+    height: 952px;
+}
+
+div#banner_center{
+    width:1200px;
+    margin:0 auto;
+    padding-top: 28px;
+}
+
+div#small_banner p{
+    font-weight: bold;
+    font-family: "微软雅黑";
+    font-size: 46px;
+    margin:0 auto;
+    width: 276px;
+    color:#ffffff;
+}
+
+div#small_banner #photo{
+    width: 1200px;
+    margin:104px auto 22px auto;
+
+}
+
+div#small_banner #photo h1:first-child{
+    float:left;
+}
+
+div#small_banner #photo h1:nth-child(2){
+    float:right;
+}
+
+div#small_banner h4{
+    text-align: justify;
+    font-size: 30px;
+    font-family: "微软雅黑";
+    font-weight:bold;
+    color:#ffffff;
+    width: 910px;
+    margin:0 auto;
+}
+
+div#small_banner #button1{
+    background: linear-gradient(#d10009,#a60108);
+    width: 480px;
+    height: 74px;
+    display: block;
+    border-radius: 4px;
+    margin: 50px auto 0;
+    font-size: 30px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 74px;
+    color: #ffffff;
+    border-style: none;
+    text-decoration: none;
+}
+
+/*banner3*/
+div#banner_box3{
+    width:100%;
+    height: 616px;
+    margin: 0 auto;
+    display: flex;
+}
+div#banner_box3::before {
+        content: "";
+        flex: 1 1 auto;
+        background: url(../images/banner3_0.png) no-repeat top right;
+}
+div#banner_box3::after {
+        content: "";
+        flex: 1 1 auto;
+        background: url(../images/banner3_2.png) top left;
+}
+div#banner3{
+    width: 1200px;
+    height: 616px;
+    background: url(../images/banner3_1.png);
+    margin: 0 auto;
+}
+div#banner_box3 a{
+    background: linear-gradient(#d10009,#a60108);
+    width: 480px;
+    height: 74px;
+    display: block;
+    border-radius: 4px;
+    margin:492px auto 0;
+    font-size: 30px;
+    font-family: "微软雅黑";
+    text-align: center;
+    line-height: 74px;
+    color: #ffffff;
+    border-style: none;
+    text-decoration: none;
+}
+
+/*banner4*/
+div#banner_box4{
+    background-color: #fff;
+    width:100%;
+    height: 623px;
+}
+
+div#banner4{
+    width: 1200px;
+    height: 623px;
+    margin:0 auto;
+    background-image: url(../images/banner4.png);
+    position: relative;
+}
+div#banner4>a{
+    position: absolute;
+    top: 340px;
+    width: 180px;
+    height: 50px;
+}
+div#banner4>a:nth-child(1){
+    left: 360px;
+}
+div#banner4>a:nth-child(2){
+    left: 960px;
+}
+
+/* banner5 */
+div#banner_box5{
+    background-color: #0083ce;
+    width:100%;
+    height: 700px;
+    position: relative;
+}
+
+div#banner5{
+    width: 1200px;
+    height: 700px;
+    margin:0 auto;
+    background-image: url(../images/banner5.png);
+    position: relative;
+}
+div#banner5 a{
+    position: absolute;
+    top: 532px;
+    left: 13px;
+    width: 590px;
+    height: 100px;
+}
+
+/* banner6 */
+div#banner_box6{
+    background: url(../images/banner6.png) center top;
+    width:100%;
+    height: 879px;
+    position: relative;
+}
+div#banner6{
+    width: 1200px;
+    height: 879px;
+    margin:0 auto;
+    background-image: url(../images/banner6_1.png);
+    position: relative;
+}
+div#banner6 a{
+    position: absolute;
+    top: 775px;
+    left: 374px;
+    width: 480px;
+    height: 72px;
+}
+/* banner7 */
+div#banner_box7{
+    background-color: #ffbd5d;
+    width:100%;
+    height: 1097px;
+    position: relative;
+}
+div#banner7{
+    width: 1200px;
+    height: 1097px;
+    margin:0 auto;
+    background-image: url(../images/banner7.png);
+    position: relative;
+}
+div#banner7 a{
+    position: absolute;
+    top: 973px;
+    left: 445px;
+    width: 340px;
+    height: 73px;
+}
+/* banner8 */
+div#banner_box8{
+    background-color: #6bd9cc;
+    width:100%;
+    height: 704px;
+    position: relative;
+}
+div#banner8{
+    width: 1200px;
+    height: 704px;
+    margin:0 auto;
+    background-image: url(../images/banner8.png);
+    position: relative;
+}
+div#banner8 a{
+    position: absolute;
+    top: 584px;
+    left: 418px;
+    width: 365px;
+    height: 72px;
+}
+/* banner9 */
+div#banner_box9{
+    background-color: #d10009;
+    width:100%;
+    height: 761px;
+    position: relative;
+}
+div#banner9{
+    width: 1200px;
+    height: 761px;
+    margin:0 auto;
+    background-image: url(../images/banner9.png);
+    position: relative;
+}
+div#banner9 a{
+    position: absolute;
+    top: 641px;
+    left: 460px;
+    width: 280px;
+    height: 60px;
+}
+/* banner10 */
+div#banner_box10{
+    background: url(../images/banner10.png);
+    width:100%;
+    height: 507px;
+    position: relative;
+}
+div#banner10{
+    width: 1200px;
+    height: 507px;
+    margin:0 auto;
+    background-image: url(../images/banner10_1.png);
+    padding: 169px 220px;
+    font-size: 24px;
+    color: #fff;
+    position: relative;
+}
+div#banner10 a{
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+div#banner10 a:hover{
+    color: #d10009;
+    text-decoration: underline;
+}
+div#banner10 a.more{
+    position: absolute;
+    top: 255px;
+    left: 460px;
+    width: 280px;
+    height: 60px;
+}

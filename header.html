@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./scss/index1.css">
+    <script src="./js/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hd">
+            <!-- top bar -->
+            <div class="hd-bar">
+                <div class="hd-top clearfix">
+                    <span class="hd-school">咨询电话：023-63606865&nbsp;023-63606864&nbsp;17723166962</span>
+
+                    <span class="fr hd-about">
+                        <a href="#">联系我们</a>
+                        <span class="gray-line">|</span>
+                        <a href="#">客服中心</a>
+                        <span class="gray-line">|</span>
+                        <a href="#">下载APP</a>
+                        <span class="gray-line">|</span>
+                        <a href="#">网站地图</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- logo and school -->
+            <div class="hd-content clearfix">
+                <h1 class="clip">创富文化教育</h1>
+                <a href="http://www.cfujy.com/#" class="fl hd-logo">
+                    <span class="clip">创富文化教育</span>
+                </a>
+                <div class="fr hd-school">
+
+                </div>
+            </div>
+
+            <!-- nav -->
+            <div class="hd-nav">
+                <div class="nav">
+                    <a class="on" href="/">首页</a>
+
+                    <a href="/plus/list.php?tid=20" rel="dropmenu20">招生简章</a>
+
+                    <a href="/plus/list.php?tid=25" rel="dropmenu25">报考指南</a>
+
+                    <a href="/plus/list.php?tid=30" rel="dropmenu30">行业新闻</a>
+
+                    <a href="/plus/list.php?tid=34" rel="dropmenu34">免费题库</a>
+
+                    <a href="/plus/list.php?tid=39">创富网校</a>
+
+                    <a href="/plus/list.php?tid=100">通知公告</a>
+
+                    <a href="/plus/list.php?tid=96">师资力量</a>
+
+                    <a href="/plus/list.php?tid=50" rel="dropmenu50">资料下载</a>
+
+                    <a href="/plus/list.php?tid=54">关于创富</a>
+
+                    <a href="/plus/list.php?tid=99">成绩查询</a>
+
+                    <div class="dropdown">
+                        <span class="dropdown__title">更多
+                            <i class="ico-downarrow"></i>
+                        </span>
+                        <ul class="dropdown__items">
+                            <li>
+                                <a href="/plus/list.php?tid=12"> 教师资格证 </a>
+                            </li>
+                            <li>
+                                <a href="/plus/list.php?tid=13"> 人力资源师 </a>
+                            </li>
+                            <li>
+                                <a href="/plus/list.php?tid=14"> 心理咨询师 </a>
+                            </li>
+                            <li>
+                                <a href="/plus/list.php?tid=15"> 注册营养师 </a>
+                            </li>
+                            <li>
+                                <a href="/plus/list.php?tid=16"> 成人专本科 </a>
+                            </li>
+                            <li>
+                                <a href="/plus/list.php?tid=17"> 团体内训 </a>
+                            </li>
+                            <li>
+                                <a href="/plus/list.php?tid=18"> 全日制升本 </a>
+                            </li>
+                            <li>
+                                <a href="/plus/list.php?tid=19"> 艺术高考 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="hd-nav">
+                <div class="nav">
+                    <a class="on" href="http://www.cfujy.com/">首页</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=20" rel="dropmenu20">招考简章</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=25" rel="dropmenu25">报考指导</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=30" rel="dropmenu30">政策法规</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=34" rel="dropmenu34">历年真题</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=38" rel="dropmenu38">开课通知</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=39">创富通知</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=40" rel="dropmenu40">考试辅导</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=50" rel="dropmenu50">资料下载</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=54">创富简介</a>
+        
+                    <a href="http://www.cfujy.com/plus/list.php?tid=12">教师资格证</a>
+        
+                    <div class="dropdown">
+                        <span class="dropdown__title">更多<i class="ico-downarrow"></i></span>
+                        <ul class="dropdown__items">
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=13"> 教师公招 </a></li>
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=14"> 人力资格证 </a></li>
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=15"> 心理资格证 </a></li>
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=16"> 会计资格证 </a></li>
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=17"> 其他资格证 </a></li>
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=18"> 事业单位考试 </a></li>
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=19"> 公务员考试 </a></li>
+                            <li> <a href="http://www.cfujy.com/plus/list.php?tid=55"> 学校风采 </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        <div class="banner" style="height:600px"></div>
+        <div>
+            <div class="c1">
+                <div>
+                    <a href="#">
+                        <p>企业人力资源管理师是是求职、任职、晋升、全国通用的国家统考职业证书，从业人员必须持证上岗。</p>
+                        <h5>12月30日前报名即享优惠，面授送网校</h5>
+                        <h6>
+                            开课时间：
+                            <span>2017年12月24日</span>
+                        </h6>
+                        <button>立即预约试听</button>
+                    </a>
+                    <a href="#">
+                        <img src="./img/c1_1.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./img/c1_2.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./img/c1_3.png" alt="">
+                    </a>
+                </div>
+                <div class="c1_2">
+                    <!-- 课程试听 -->
+                    <div class="c1_2_st">
+                        <p>课程试听
+                            <a href="">更多 >></a>
+                        </p>
+                        <div>
+                            <div>
+                                <div class="fl">
+                                    <img src="./img/c1_4.png" alt="">
+                                    <p>
+                                        <span>心理咨询师视频</span>
+                                        <a href="#">立即试听</a>
+                                    </p>
+                                </div>
+                                <div class="fr">
+                                    <img src="./img/c1_4.png" alt="">
+                                    <p>
+                                        <span>心理咨询师视频</span>
+                                        <a href="#">立即试听</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>教室资格证视频
+                                    <span>2018年1月5日更新
+                                        <a href="#">免费试听</a>
+                                    </span>
+                                </li>
+                                <li>教室资格证视频
+                                    <span>2018年1月5日更新
+                                        <a href="#">免费试听</a>
+                                    </span>
+                                </li>
+                                <li>教室资格证视频
+                                    <span>2018年1月5日更新
+                                        <a href="#">免费试听</a>
+                                    </span>
+                                </li>
+                                <li>教室资格证视频
+                                    <span>2018年1月5日更新
+                                        <a href="#">免费试听</a>
+                                    </span>
+                                </li>
+                                <li>教室资格证视频
+                                    <span>2018年1月5日更新
+                                        <a href="#">免费试听</a>
+                                    </span>
+                                </li>
+                                <li>教室资格证视频
+                                    <span>2018年1月5日更新
+                                        <a href="#">免费试听</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 课程发布 -->
+                    <div class="c1_2_fb">
+                        <p>课程发布
+                            <a href="">更多 >></a>
+                        </p>
+                        <div>
+                            <p>
+                                课程名称
+                                <span>更新时间</span>
+                            </p>
+                            <ul>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div>
+                                        <a href="#">课程名称 2018上心理咨询师3/2级课表（周日班） </a>
+                                        <span>2018年1月5日</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f_c2">
+            <div class="c2">
+                <div>
+                    <img src="./img/c2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- 报名地点选择 -->
+        <div class="f_c3">
+            <div class="c3">
+                <ul>
+                    <li>
+                        <a href="">渝中</a>
+                    </li>
+                    <li>
+                        <a href="">渝北</a>
+                    </li>
+                    <li>
+                        <a href="">万州</a>
+                    </li>
+                    <li>
+                        <a href="">涪陵</a>
+                    </li>
+                    <li>
+                        <a href="">九龙坡</a>
+                    </li>
+                    <li>
+                        <a href="">大足</a>
+                    </li>
+                    <li>
+                        <a href="">合川</a>
+                    </li>
+                    <li>
+                        <a href="">北碚</a>
+                    </li>
+                    <li>
+                        <a href="">大渡口</a>
+                    </li>
+                    <li>
+                        <a href="">渝中</a>
+                    </li>
+                    <li>
+                        <a href="">渝北</a>
+                    </li>
+                    <li>
+                        <a href="">万州</a>
+                    </li>
+                    <li>
+                        <a href="">涪陵</a>
+                    </li>
+                    <li>
+                        <a href="">九龙坡</a>
+                    </li>
+                    <li>
+                        <a href="">大足</a>
+                    </li>
+                    <li>
+                        <a href="">合川</a>
+                    </li>
+                    <li>
+                        <a href="">北碚</a>
+                    </li>
+                    <li>
+                        <a href="">大渡口</a>
+                    </li>
+                    <li>
+                        <a href="">渝中</a>
+                    </li>
+                    <li>
+                        <a href="">渝北</a>
+                    </li>
+                    <li>
+                        <a href="">万州</a>
+                    </li>
+                    <li>
+                        <a href="">涪陵</a>
+                    </li>
+                    <li>
+                        <a href="">九龙坡</a>
+                    </li>
+                    <li>
+                        <a href="">大足</a>
+                    </li>
+                    <li>
+                        <a href="">合川</a>
+                    </li>
+                    <li>
+                        <a href="">北碚</a>
+                    </li>
+                    <li>
+                        <a href="">大渡口</a>
+                    </li>
+                    <li>
+                        <a href="">渝中</a>
+                    </li>
+                    <li>
+                        <a href="">渝北</a>
+                    </li>
+                    <li>
+                        <a href="">万州</a>
+                    </li>
+                    <li>
+                        <a href="">涪陵</a>
+                    </li>
+                    <li>
+                        <a href="">九龙坡</a>
+                    </li>
+                    <li>
+                        <a href="">大足</a>
+                    </li>
+                    <li>
+                        <a href="">合川</a>
+                    </li>
+                    <li>
+                        <a href="">北碚</a>
+                    </li>
+                    <li>
+                        <a href="">大渡口</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 创富名师 -->
+        <div>
+            <div class="c4">
+                <h4>
+                    <img src="./img/c4_1.png" alt="">
+                </h4>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="./img/c4_2.png" alt="">
+                            <p class="c4_xm">
+                                <i></i>
+                                <span>时勘</span>
+                                <b></b>
+                            </p>
+                            <div>
+                                <u>
+                                    <img src="./img/c4_2.png" alt="">
+                                </u>
+                                <p class="c4_xm">
+                                    <i></i>
+                                    <span>时勘</span>
+                                    <b></b>
+                                </p>
+                                <h5>发展与教育心理学博士，西南大学心理学院副教授，中国心理学会高级会员， 2008年至今在北京师范大学发展心理研究所从事博士后研究工作，多年从事国家心理咨询师培训。</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/c4_3.png" alt="">
+                            <p class="c4_xm">
+                                <i></i>
+                                <span>唐文峰</span>
+                                <b></b>
+                            </p>
+                            <div>
+                                <u>
+                                    <img src="./img/c4_3.png" alt="">
+                                </u>
+                                <p class="c4_xm">
+                                    <i></i>
+                                    <span>唐文峰</span>
+                                    <b></b>
+                                </p>
+                                <h5>发展与教育心理学博士，西南大学心理学院副教授，中国心理学会高级会员， 2008年至今在北京师范大学发展心理研究所从事博士后研究工作，多年从事国家心理咨询师培训。</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/c4_4.png" alt="">
+                            <p class="c4_xm">
+                                <i></i>
+                                <span>杨艺</span>
+                                <b></b>
+                            </p>
+                            <div>
+                                <u>
+                                    <img src="./img/c4_4.png" alt="">
+                                </u>
+                                <p class="c4_xm">
+                                    <i></i>
+                                    <span>杨艺</span>
+                                    <b></b>
+                                </p>
+                                <h5>发展与教育心理学博士，西南大学心理学院副教授，中国心理学会高级会员， 2008年至今在北京师范大学发展心理研究所从事博士后研究工作，多年从事国家心理咨询师培训。</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/c4_5.png" alt="">
+                            <p class="c4_xm">
+                                <i></i>
+                                <span>张仲明</span>
+                                <b></b>
+                            </p>
+                            <div>
+                                <u>
+                                    <img src="./img/c4_5.png" alt="">
+                                </u>
+                                <p class="c4_xm">
+                                    <i></i>
+                                    <span>张仲明</span>
+                                    <b></b>
+                                </p>
+                                <h5>发展与教育心理学博士，西南大学心理学院副教授，中国心理学会高级会员， 2008年至今在北京师范大学发展心理研究所从事博士后研究工作，多年从事国家心理咨询师培训。</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/c4_6.png" alt="">
+                            <p class="c4_xm">
+                                <i></i>
+                                <span>唐旭</span>
+                                <b></b>
+                            </p>
+                            <div>
+                                <u>
+                                    <img src="./img/c4_6.png" alt="">
+                                </u>
+                                <p class="c4_xm">
+                                    <i></i>
+                                    <span>唐旭</span>
+                                    <b></b>
+                                </p>
+                                <h5>发展与教育心理学博士，西南大学心理学院副教授，中国心理学会高级会员， 2008年至今在北京师范大学发展心理研究所从事博士后研究工作，多年从事国家心理咨询师培训。</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/c4_7.png" alt="">
+                            <p class="c4_xm">
+                                <i></i>
+                                <span>曹贵康</span>
+                                <b></b>
+                            </p>
+                            <div>
+                                <u>
+                                    <img src="./img/c4_7.png" alt="">
+                                </u>
+                                <p class="c4_xm">
+                                    <i></i>
+                                    <span>曹贵康</span>
+                                    <b></b>
+                                </p>
+                                <h5>发展与教育心理学博士，西南大学心理学院副教授，中国心理学会高级会员， 2008年至今在北京师范大学发展心理研究所从事博士后研究工作，多年从事国家心理咨询师培训。</h5>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/c4_8.png" alt="">
+                            <p class="c4_xm">
+                                <i></i>
+                                <span>杨东</span>
+                                <b></b>
+                            </p>
+                            <div>
+                                <u>
+                                    <img src="./img/c4_8.png" alt="">
+                                </u>
+                                <p class="c4_xm">
+                                    <i></i>
+                                    <span>杨东</span>
+                                    <b></b>
+                                </p>
+                                <h5>发展与教育心理学博士，西南大学心理学院副教授，中国心理学会高级会员， 2008年至今在北京师范大学发展心理研究所从事博士后研究工作，多年从事国家心理咨询师培训。</h5>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a href="">
+                    点击了解更多创富师资
+                </a>
+            </div>
+
+        </div>
+        <!-- 学校风采 -->
+        <div class="f_c5">
+            <div class="c5">
+                <h4>
+                    <img src="./img/c5_1.png" alt="">
+                </h4>
+                <div>
+                    <!-- 只能放5张图 -->
+                    <a href="">
+                        <img src="./img/c5_2.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/c5_3.png" alt="">
+                    </a>
+                    <!--中间大图 -->
+                    <a href="">
+                        <img src="./img/c5_4.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/c5_5.png" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/c5_6.png" alt="">
+                    </a>
+                </div>
+                <a href="">
+                    了解更多
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="c6">
+                <!-- 视频课程 -->
+                <div class="c6_kc">
+                    <p>
+                        视频课程
+                        <a href="">更多>></a>
+                    </p>
+                    <div class="c6_kc_list">
+                        <div class="hd">
+                            <ul>
+                                <li>教师资格证</li>
+                                <li>人力资源管理师</li>
+                                <li>心理咨询师</li>
+                                <li>更多其他课程</li>
+                            </ul>
+                        </div>
+                        <div class="bd">
+                            <ul>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>教师资格证教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>教师资格证教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>教师资格证教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>人力资源教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>教师资格证教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>教师资格证教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>心理咨询师教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>教师资格证教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>教师资格证教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <img src="./img/c6_1.png" alt="">
+                                    <h4>其他教学视频</h4>
+                                    <h5>主讲：
+                                        <span>刘老师</span>
+                                    </h5>
+                                    <h6>评价：
+                                        <span>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                            <i class="ico-star"></i>
+                                        </span>
+                                    </h6>
+                                    <a href="">立即购买</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    // 视频课程切换
+                    $(function () {
+                        $(".c6_kc_list").slide({
+                            trigger: "click"
+                        });
+                    })
+                </script>
+                <!-- 名师讲堂 -->
+                <div class="c6_jt">
+                    <p>
+                        名师讲堂
+                        <a href="">更多>></a>
+                    </p>
+                    <div class="c6_jt_list">
+                        <ul>
+                            <li>
+                                <img src="./img/c6_2.png" alt="">
+                                <div>
+                                    <p>2017年下三级人力资源级人力资源</p>
+                                    <p>课程时间：
+                                        <span>2017年8月6日</span>
+                                    </p>
+                                    <p>课程题目：
+                                        <span>绩效管理</span>
+                                    </p>
+                                    <p>主讲：
+                                        <span>唐文锋老师</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./img/c6_2.png" alt="">
+                                <div>
+                                    <p>2017年下三级人力资源级人力资源</p>
+                                    <p>课程时间：
+                                        <span>2017年8月6日</span>
+                                    </p>
+                                    <p>课程题目：
+                                        <span>绩效管理</span>
+                                    </p>
+                                    <p>主讲：
+                                        <span>唐文锋老师</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f_c7">
+            <div class="c7">
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="ft">
+            <div class="ft-content">
+                <div class="clearfix ft-top">
+                    <!-- 友情链接 -->
+                    <div class="fl ft-friend-link">
+                        <h4>友情链接</h4>
+                        <ul class="clearfix ft-fl-list" style="min-height: 58px;">
+                            <li>
+                                <a href="">重庆市职业技能鉴定中心</a>
+                            </li>
+                            <li>
+                                <a href="">重庆成教/自考/网教</a>
+                            </li>
+                            <li>
+                                <a href="">重庆大学网络教育</a>
+                            </li>
+                            <li>
+                                <a href="">西南大学成教/自考</a>
+                            </li>
+                            <li>
+                                <a href="">企事业打我团体内训</a>
+                            </li>
+                            <li>
+                                <a href="">重庆联盟艺考培训中心</a>
+                            </li>
+                            <li>
+                                <a href="">西南大学在职教育基地</a>
+                            </li>
+                        </ul>
+                        <h4>友情链接</h4>
+                        <p>电话：023-63606865； 023-63606864；17723166962</p>
+                        <p>微信：17723166962</p>
+                        <p>QQ：89033379</p>
+                        <p>微博：cfu2002@sina.com</p>
+                        <p>地址：
+                            <span class="fz14">重庆市两路口文化宫内创富文化教育集团</span>
+                        </p>
+                    </div>
+                    <!-- 二维码 -->
+                    <div class="ft-QR-code">
+                        <img src="./img/QR-code.png" alt="" width="75" height="75">
+                    </div>
+                </div>
+
+                <div class="ft-down">
+                    <div class="fr ft-our">
+                        关注我们
+                        <a href="http://www.cfujy.com/#">
+                            <i class="ico-green-sinawb"></i>
+                            <span class="clip">新浪微博</span>
+                        </a>
+                        <a href="http://www.cfujy.com/#">
+                            <i class="ico-green-wechat"></i>
+                            <span class="clip">微信</span>
+                        </a>
+                    </div>
+
+                    <a href="http://www.cfujy.com/#">关于我们</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">证书制度</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">国家法规</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">申报条件</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">收费标准</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">证书样本</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">英才招聘</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">网站地图</a>
+                    <span class="gray-line">|</span>
+                    <a href="http://www.cfujy.com/#">联系我们</a>
+                    <p>
+                        版权所有：重庆市创富管理咨询职业培训学校 渝ICP备07003552号-1
+                    </p>
+
+                </div>
+                <div style="width:200px;margin:80px auto 0;">
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50010302001436" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="./img/gongan.png" style="float:left;">
+                        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#FFF;">渝公网安备 50010302001436号</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/jquery.superslide.min.js"></script>
+</body>
+
+</html>

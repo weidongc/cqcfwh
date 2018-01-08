@@ -1,0 +1,213 @@
+html, body, div, span, label, object, iframe, p, h1, h2, h3, h4, h5, pre, code, a, em, img, strong, dl, dt, dd, ul, ol, li, form, button, input, textarea, select, fieldset, legend, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, nav, section, time, audio, video {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    font: 12px/1.5 Arial, "Microsoft YaHei", "微软雅黑"
+}
+
+a, input, select, textarea, button {
+    outline: none
+}
+
+input[type="button"], button {
+    cursor: pointer
+}
+
+span, label {
+    display: inline-block
+}
+
+ol, ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.clip {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px)
+}
+
+.container {
+    width: 100%;
+    height: 100%
+}
+
+.ellipsis {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    text-overflow: ellipsis
+}
+
+.transition {
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear
+}
+
+.hide {
+    display: none !important
+}
+
+.show {
+    display: block !important
+}
+
+.inline-block {
+    font-size: 0
+}
+
+.inline-block > * {
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.pr {
+    position: relative
+}
+
+.pa {
+    position: absolute
+}
+
+.pf {
+    position: fixed
+}
+
+.ps {
+    position: static
+}
+
+.fl {
+    float: left;
+    display: inline
+}
+
+.fr {
+    float: right;
+    display: inline
+}
+
+.fn {
+    float: none !important
+}
+
+.cl {
+    clear: left
+}
+
+.cr {
+    clear: right
+}
+
+.cb {
+    clear: both
+}
+
+.clearfix:after, .clear:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both
+}
+
+.clearfix, .clear {
+    *zoom: 1
+}
+
+.tc {
+    text-align: center !important
+}
+
+.tl {
+    text-align: left !important
+}
+
+.tr {
+    text-align: right !important
+}
+
+.hidden {
+    visibility: hidden !important
+}
+
+.visible {
+    visibility: visible !important
+}
+
+.vat {
+    vertical-align: top !important
+}
+
+.vam {
+    vertical-align: middle !important
+}
+
+.no-padding {
+    padding: 0 !important
+}
+
+.no-padding-left {
+    padding-left: 0 !important
+}
+
+.no-padding-top {
+    padding-top: 0 !important
+}
+
+.no-padding-right {
+    padding-right: 0 !important
+}
+
+.no-padding-bottom {
+    padding-bottom: 0 !important
+}
+
+.no-margin {
+    margin: 0 !important
+}
+
+.no-margin-left {
+    margin-left: 0 !important
+}
+
+.no-margin-top {
+    margin-top: 0 !important
+}
+
+.no-margin-right {
+    margin-right: 0 !important
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0;padding:0;
+}
+*:before,*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*# sourceMappingURL=base.css.map */
