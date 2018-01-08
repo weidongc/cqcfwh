@@ -22,7 +22,7 @@ html, body, div, span, label, object, iframe, p, h1, h2, h3, h4, h5, pre, code, 
     box-sizing: border-box;
 }
 
-img{
+div.header img{
     display: block;
 }
 
@@ -210,7 +210,7 @@ div#right_QR p{
     left:auto;
     right:0;
     top:40px;
-    z-index: 1;
+    z-index: 100;
 }
 
 .hd-nav .nav .dropdown__items li {

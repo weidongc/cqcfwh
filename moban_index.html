@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>{dede:global.cfg_webname/}</title>
+		<meta name="description" content="{dede:global.cfg_description/}" />
+		<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+		{dede:include filename="style.htm"/}
+		<link href="{dede:global.cfg_templets_skin/}/css/index.css" rel="stylesheet" media="screen" type="text/css" />
+		<script language="javascript" type="text/javascript">
+            $(function () {
+                //默认加载所有招考信息
+                changeExamClass(20, null, 1);
+
+              /*  //加载考试辅导tab页
+                $('.bd-five .bd-five-left .on').each(function (index, item) {
+                    changeExamination(item);
+                });*/
+            });
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- start header  (CV大法)-->
+			{dede:include filename="header.htm"/}
+			<!-- end header -->
+
+			<!-- start content -->
+			<div class="bd">
+				<!-- 第一块 -->
+				<div class="bd-one clearfix">
+					<div class="fl">
+						<div id="lunbo" class="carousel slide" data-ride="carousel" data-interval="5000">
+							<div class="carousel-inner">
+								{dede:loop table='#@__archives' if="flag like '%h%' and flag like '%p%'" sort='pubdate' orderway='desc' row=5}
+								<div class='item [field:global name=autoindex runphp="yes"](@me==1)?@me="active":@me="";[/field:global]'>
+									<a href="[field:id function=getArcUrlById(@me)/]"><img src="[field:litpic/]" alt="[field:title/]"/></a>
+									<div class="bd-one-today">
+										<p>
+											<img src="/templets/xiaojs/img/today.png" alt="" style="width:59px;height: 53px" />
+											<span class="title"><a href="[field:id function=getArcUrlById(@me)/]">[field:title/]</a></span>
+											<span class="ellipsis"><a href="[field:id function=getArcUrlById(@me)/]">[field:description/]</a></span>
+										</p>
+									</div>
+								</div>
+								{/dede:loop}
+							</div>
+						</div>
+					</div>
+
+					<div class="fr">
+						<div class="tit clearfix">
+							<a class="fl" target="_blank" href="http://www.cfu101.com/user/baoming.asp"><img src="/templets/xiaojs/img/online-signUp.png"/></a>
+							<a class="fr" href="#"><img src="/templets/xiaojs/img/online-pay.png"/></a>
+						</div>
+						<div class="recent">
+							<h4 class="fz16"><span></span>近期招考课程</h4>
+							<div class="recruit_head clearfix">
+								<span style="width:28%">课程名称</span>
+								<span>开课时间</span>
+								<span>招生简章</span>
+								<span>在线报名</span>
+								<span>课表查询</span>
+							</div>
+							<div class="recruit_list scroll">
+								<ul>
+									{dede:arclist addfields='uptime,teacher,zsjz' orderway='desc' orderby='sortrank' row='10' typeid='38' channelid='6'}
+										<li class="clearfix">
+											<span class="nobr" style="width:28%">
+												<a href="[field:id function=getArcUrlById(@me)/]">[field:title /]</a>
+											</span>
+											<span>[field:uptime function="MyDate('Y-m-d',@me)"/]</span>
+											<span>
+												<!--<a href="[field:id function=getArcUrlById(@me)/]">招生简章</a>-->
+												<a href="[field:zsjz /]">招生简章</a>
+											</span>
+											<span>
+												<a target="_blank" href="http://www.cfu101.com/user/baoming.asp">在线报名</a>
+											</span>
+											<span>
+												<a href="[field:id function=getArcUrlById(@me)/]">查询</a>
+											</span>
+										</li>
+									{/dede:arclist}
+									<!--<li class="clearfix">
+										<span class="nobr" style="width:28%">
+											<a href="#">人力资源培训师</a>
+										</span>
+												<span>3月19日</span>
+												<span>
+											<a href="#">招生简章</a>
+										</span>
+												<span>
+											<a href="#">在线报名</a>
+										</span>
+												<span>
+											<a href="#">查询</a>
+										</span>
+									</li>
+									<li class="clearfix">
+										<span class="nobr" style="width:28%">
+											<a href="#">人力资源培训师</a>
+										</span>
+												<span>3月19日</span>
+												<span>
+											<a href="#">招生简章</a>
+										</span>
+												<span>
+											<a href="#">在线报名</a>
+										</span>
+												<span>
+											<a href="#">查询</a>
+										</span>
+									</li>
+									<li class="clearfix">
+										<span class="nobr" style="width:28%">
+											<a href="#">人力资源培训师</a>
+										</span>
+												<span>3月19日</span>
+												<span>
+											<a href="#">招生简章</a>
+										</span>
+												<span>
+											<a href="#">在线报名</a>
+										</span>
+												<span>
+											<a href="#">查询</a>
+										</span>
+									</li>
+									<li class="clearfix">
+										<span class="nobr" style="width:28%">
+											<a href="#">人力资源培训师</a>
+										</span>
+												<span>3月19日</span>
+												<span>
+											<a href="#">招生简章</a>
+										</span>
+												<span>
+											<a href="#">在线报名</a>
+										</span>
+												<span>
+											<a href="#">查询</a>
+										</span>
+									</li>
+									<li class="clearfix">
+										<span class="nobr" style="width:28%">
+											<a href="#">人力资源培训师</a>
+										</span>
+												<span>3月19日</span>
+												<span>
+											<a href="#">招生简章</a>
+										</span>
+												<span>
+											<a href="#">在线报名</a>
+										</span>
+												<span>
+											<a href="#">查询</a>
+										</span>
+									</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 第二块 -->
+				<div class="bd-two clearfix">
+					<div class="fl">
+						<span class="nobr"><a href="/plus/view.php?aid=150">教师资格证</a></span>
+						<span class="nobr"><a href="/plus/view.php?aid=148">人力资源师</a></span>
+						<span class="nobr"><a href="/plus/view.php?aid=149">心理咨询师</a></span>
+						<span class="nobr"><a href="#">注册营养师</a></span>
+						<span class="nobr"><a href="http://www.swucj.com/">成教专本科</a></span>
+						<span class="nobr"><a href="http://swucem.com/">网教专本科</a></span>
+						<span class="nobr"><a href="http://www.swucj.com/">自考专本科</a></span>
+						<span class="nobr"><a href="http://www.swuyjs.com/zyjl/dswd/">团体内训</a></span>
+						<span class="nobr"><a href="http://www.cfuzsb.com/">全日制升本</a></span>
+						<span class="nobr"><a href="http://www.swuatc.com/">艺术高考</a></span>
+					</div>
+					<div class="fr">
+						<div class="orgLunbo">
+							<div class="lunboImg"><!-- 轮播图图片 -->
+								<ul>
+									{dede:loop table='#@__archives' if="flag like '%c%' and flag like '%p%'" sort='pubdate' orderway='desc' row=5}
+										<li><a href="[field:id function=getArcUrlById(@me)/]"><img src="[field:litpic/]" alt="[field:title/]"/></a></li>
+									{/dede:loop}
+									<!--<li><img src="img/lunbo-banner.png"/></li>
+									<li><img src="img/lunbo-banner.png"/></li>
+									<li><img src="img/lunbo-banner.png"/></li>
+									<li><img src="img/lunbo-banner.png"/></li>
+									<li><img src="img/lunbo-banner.png"/></li>-->
+								</ul>
+							</div>
+							<div class="lunboDot"><ul></ul></div><!-- 底部小圆点 -->
+						</div>
+					</div>
+				</div>
+				<!-- 第三块 -->
+				<div class="bd-three clearfix">
+					<div class="sign_up_place fl">
+						<h3 class="fz18">报名点查询 <span class="fr fz14">咨询电话 63606865 63606864</span></h3>
+						<ul>
+							<!--{dede:loop table='#@__archives' if="typeid=56" sort='pubdate' orderway='asc'}
+								<li><a href="[field:id function=getArcUrlById(@me)/]">[field:title /]</a></li>
+							{/dede:loop}-->
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >渝中</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >沙坪坝</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >江北</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >南岸</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >北碚</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >渝北</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >九龙坡</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >永川</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >梁平</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >璧山</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >万州</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >铜梁</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >武隆</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >合川</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >巴南</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >涪陵</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >大足</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >江津</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >黔江</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >綦江</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >长寿</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >双桥</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >南川</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >大渡口</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >潼南</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >荣昌</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >城口</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >丰都</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >垫江</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >忠县</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >开县</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >云阳</a></li>
+                                                        <li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >四川</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >云南</a></li>
+							<li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" >贵州</a></li>
+                                                        <li><a href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112" target="_blank" ><b>其他</b></a></li>
+						</ul>
+					</div>
+					<div class="today_live fl">
+						<h3 class="fz18">今日直播课程 </h3>
+						<div class="live_list scroll">
+							<ul>
+								{dede:arclist orderway='desc' orderby='pubdate' row='4' typeid='98'}
+									<li>
+										<a href="[field:id function=getArcUrlById(@me) /]">
+											<p class="nobr">[field:fulltitle /]</p>
+											<span>[field:description /]</span>
+										</a>
+									</li>
+								{/dede:arclist}
+								<!--<li>
+									<a href="#">
+										<p class="nobr">的说法是对方是否惊魂甫定继父回家进口发动机是否是</p>
+										<span> 08:20-09:20 主讲：孔磊</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="nobr">的说法是对方是否惊魂甫</p>
+										<span> 08:20-09:20 主讲：孔磊</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="nobr">的说法是对方是否惊魂甫定</p>
+										<span> 08:20-09:20 主讲：孔磊</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="nobr">的说法是对方是否惊魂甫定继父回家进口发动机是否是</p>
+										<span> 08:20-09:20 主讲：孔磊</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<p class="nobr">的说法是对方是否惊魂甫定继父回家进口发动机是否是</p>
+										<span> 08:20-09:20 主讲：孔磊</span>
+									</a>
+								</li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="free_audition fl">
+						<h3 class="fz18">免费预约试听 </h3>
+						##form class="form_audition" onsubmit="return false;">
+							<div class="form-group">
+								<div class="ipt">
+									<input type="text" placeholder="姓名"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="ipt">
+									<input type="text" placeholder="手机号"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="btns clearfix">
+									<button class="fl" type="submit">点击预约</button>
+									<a target="_blank" href="http://looyuoms7812.looyu.com/chat/chat/p.do?_server=0&c=20001404&f=10058772&n=cfu112"><button class="fr">在线咨询</button></a>
+								</div>
+							</div>
+						##/form>
+					</div>
+				</div>
+				<!-- 第四块 (CV大法)-->
+				<div class="bd-fore clearfix" id="examClass">
+					<div class="fl examClass">
+						<div class="examClass__ad">
+							<img src="/templets/xiaojs/img/books.png" alt="">
+							<p>
+								<span>课程发布.专版</span>
+								了解各类考试信息
+							</p>
+						</div>
+						<div class="examClass__list">
+							<div class="clearfix">
+								<div class="fl dropdown">
+									<span data-id="20" class="dropdown__title">课程发布</span>
+									<ul class="dropdown__items">
+										{dede:channelartlist typeid='20'}
+										<li data-id="{dede:field name='typeid'/}">{dede:field name='typename'/}</li>
+										{/dede:channelartlist}
+									</ul>
+								</div>
+								<div class="fr inline-block examClass__page">
+									<span class=examClass__num>1/4 </span>
+									<button class="examClass__prev"><span class="clip">上一组</span></button>
+									<button class="examClass__next"><span class="clip">下一组</span></button>
+								</div>
+							</div>
+							<ul class="ulList">
+
+							</ul>
+						</div>
+					</div>
+					<div class="fr todayTopic">
+						<div class="clearfix zk-title">
+							<h2 class="fl">今日头条</h2>
+							<a href="http://www.cfujy.com" class="fr zk-title-more">更多</a>
+						</div>
+						<div class="clearfix todayTopic__items">
+							{dede:loop table='#@__archives' if="flag like '%h%' and flag like '%p%'" sort='pubdate' orderway='desc' row=3}
+							<div class='item [field:global name=autoindex runphp="yes"](@me==1)?@me="active":@me="";[/field:global]'>
+								<div class="todayTopic__item">
+									<a href="[field:id function=getArcUrlById(@me)/]">
+										<img src="[field:litpic/]" alt="[field:title/]" width="170" height="112"/>
+									</a>
+									<p>
+										[field:title/]
+									</p>
+								</div>
+							</div>
+							{/dede:loop}
+							<!--<div class="todayTopic__item">
+								<a href="http://www.cfujy.com/#">
+									<img src="/templets/xiaojs/img/css-basics.png" alt="" width="170" height="112">
+								</a>
+								<p>
+									实现响应式后台帮助大家提升网站前后端交互设计的能力
+								</p>
+							</div>
+							<div class="todayTopic__item">
+								<a href="http://www.cfujy.com/#">
+									<img src="/templets/xiaojs/img/css-basics.png" alt="" width="170" height="112">
+								</a>
+								<p>
+									实现响应式后台帮助大家提升网站前后端交互设计的能力
+								</p>
+							</div>
+							<div class="todayTopic__item">
+								<a href="http://www.cfujy.com/#">
+									<img src="/templets/xiaojs/img/css-basics.png" alt="" width="170" height="112">
+								</a>
+								<p>
+									实现响应式后台帮助大家提升网站前后端交互设计的能力
+								</p>
+							</div>-->
+						</div>
+					</div>
+				</div>
+				<!-- 第五块 -->
+				<div class="bd-five clearfix">
+					<div class="fl">
+						<h3 class="fz18">师资力量<a class="fr fz12" href="{dede:type typeid='96'}[field:typelink /]{/dede:type}">更多</a></h3>
+						<ul class="clearfix">
+							{dede:arclist orderway='desc' orderby='pubdate' row='3' typeid='96'}
+								<li>
+									<a href="[field:id function=getArcUrlById(@me)/]"><img src="[field:litpic /]"/></a>
+									<div class="msg">
+										<a href="[field:id function=getArcUrlById(@me)/]"><span>[field:title /]</span></a>
+										<span style="overflow:hidden;width:180px;height:20px;">[field:description /]</span>
+									</div>
+								</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+					<div class="fr">
+						<h3 class="fz18">名师讲堂<a class="fr fz12" href="{dede:type typeid='101'}[field:typelink /]{/dede:type}">更多</a></h3>
+						<ul class="clearfix">
+							{dede:arclist orderway='desc' orderby='pubdate' row='2' typeid='101'}
+								<li>
+									<img src="[field:litpic /]"/>
+									<a class="play" href="[field:id function=getArcUrlById(@me)/]">
+										<i class="ico-live"></i>
+									</a>
+									<div class="msg">
+										<p class="nobr fz14">[field:fulltitle /]</p>
+										<span class="danhong">[field:shorttitle /]</span>
+									</div>
+								</li>
+							{/dede:arclist}
+							<!--<li>
+								<img src="/templets/xiaojs/img/play-bg.png"/>
+								<a class="play" href="#">
+									<i class="ico-live"></i>
+								</a>
+								<div class="msg">
+									<p class="nobr fz14">人力资源管理一级在线直播教程</p>
+									<span class="danhong">人力资源管理</span>
+								</div>
+							</li>
+							<li>
+								<img src="/templets/xiaojs/img/play-bg.png"/>
+								<a class="play" href="#">
+									<i class="ico-live"></i>
+								</a>
+								<div class="msg">
+									<p class="nobr fz14">人力资源管理一级在线直播教程人力资源管理一级在线直播教程</p>
+									<span class="danlv">人力资源管理</span>
+								</div>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+				<!-- 第六块 -->
+				<div class="bd-six clearfix">
+					<div class="fl">
+						<h3 class="fz18">考试交流<a class="fr fz12" href="{dede:type typeid='97'}[field:typelink /]{/dede:type}">更多</a></h3>
+						<ul class="clearfix" style="min-height: 141px;">
+							<li>
+								<ul>
+									{dede:arclist orderway='desc' orderby='pubdate' row='5' typeid='97' flag='ksjlhc'}
+										<li class="nobr">
+											<span class="spot"></span>
+											<a href="[field:id function=getArcUrlById(@me) /]">[行测] [field:title /]</a>
+										</li>
+									{/dede:arclist}
+									<!--<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[行测] 酷虎快发货速度快发货速度快放假考多少分接口上近代史可发货单</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[行测] 酷虎快发货速度快发货速度快放假考多少分接口</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[行测] 酷虎快发货速度快发货速</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[行测] 酷虎快发货速度快发货速度快放假考多少分接</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[行测] 酷虎快发货速度快发货速度快放假考多少分接口上近代史可发货单</a>
+									</li>-->
+								</ul>
+							</li>
+							<li>
+								<ul>
+									{dede:arclist orderway='desc' orderby='pubdate' row='5' typeid='97' flag='ksjlms'}
+										<li class="nobr">
+											<span class="spot"></span>
+											<a href="[field:id function=getArcUrlById(@me) /]">[面试] [field:title /]</a>
+										</li>
+									{/dede:arclist}
+									<!--<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[面试] 酷虎快发货速度快发货速度快放假考多少分接口上近代史可发货单</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[面试] 酷虎快发货速度快发货速度快放假考多少分接口</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[面试] 酷虎快发货速度快发货速</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[面试] 酷虎快发货速度快发货速度快放假考多少分接</a>
+									</li>
+									<li class="nobr">
+										<span class="spot"></span>
+										<a href="#">[面试] 酷虎快发货速度快发货速度快放假考多少分接口上近代史可发货单</a>
+									</li>-->
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="fr">
+						<h3 class="fz18">资料下载<a class="fr fz12" href="{dede:type typeid='50'}[field:typelink /]{/dede:type}">更多</a></h3>
+						<ul>
+							{dede:loop table='#@__archives' if="typeid=50" sort='pubdate' orderway='desc' row=5}
+							<li>
+								<a class="clearfix" href="[field:id function=getArcUrlById(@me)/]">
+									<span class="nobr txt">[field:title /]</span>
+									<span class="fr"><span class="num">[field:click /]</span>人下载</span>
+								</a>
+							</li>
+							{/dede:loop}
+						</ul>
+					</div>
+				</div>
+				<!-- 第七块 (CV大法)-->
+				<div class="bd-block bd-seven">
+					<div class="clearfix zk-title">
+						<h2 class="fl">视频课程</h2>
+					</div>
+					<div class="clearfix bd-seven-content">
+						<div class="fl bd-seven-left">
+							<div class="zk-tab">
+								<div class="inline-block zk-tabTitle">
+									<button class="on" data-id="91">职业资格证</button>
+									<button data-id="92">学历</button>
+									<button data-id="93">艺术培训</button>
+									<button data-id="94">团体内训</button>
+									<button data-id="95">其他</button>
+								</div>
+								<div class="zk-tabContent">
+									<ul id="bdSeven91" class="clearfix online">
+										{dede:arclist addfields='trueprice,teacher' orderway='desc' orderby='pubdate' row='4' typeid='91' channelid='6'}
+											<li class="online__item">
+												<a class="online__img" href="[field:id function=getArcUrlById(@me)/]">
+													<img src="[field:litpic /]" alt="" width="170" height="112">
+													<span class="clearfix online__star">
+														<img class="fl online__star-head" src="/templets/xiaojs/img/avatar02.png" alt="" width="21" height="21">
+														<span class="online__star-name">[field:click /]</span>
+														<span class="online__star-items">
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+														</span>
+													</span>
+												</a>
+												<a href="[field:id function=getArcUrlById(@me)/]" class="online__title">[field:title /]</a>
+												<span class="clearfix online__info">
+													<span class="fl online__info-price">¥[field:trueprice /]</span>
+													<span class="fr online__info-views">[field:click /]次播放</span>
+												</span>
+												<a href="[field:id function=getArcUrlById(@me)/]"><button class="online__buy">立即购买</button></a>
+											</li>
+										{/dede:arclist}
+										<!--<li class="online__item">
+											<a class="online__img" href="#">
+												<img src="/templets/xiaojs/img/cover.png" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+												<img class="fl online__star-head" src="img/avatar02.png" alt="" width="21" height="21">
+												<span class="online__star-name">漩涡鸣人</span>
+												<span class="online__star-items">
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+												</span>
+											</span>
+											</a>
+											<a href="#" class="online__title">企业人力资源管理师二级-薪酬在线直播课程</a>
+											<span class="clearfix online__info">
+											<span class="fl online__info-price">¥900.00</span>
+											<span class="fr online__info-views">999次播放</span>
+										</span>
+											<button class="online__buy">立即购买</button>
+										</li>
+										<li class="online__item">
+											<a class="online__img" href="#">
+												<img src="/templets/xiaojs/img/cover.png" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+												<img class="fl online__star-head" src="img/avatar02.png" alt="" width="21" height="21">
+												<span class="online__star-name">漩涡鸣人</span>
+												<span class="online__star-items">
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+												</span>
+											</span>
+											</a>
+											<a href="#" class="online__title">企业人力资源管理师二级-薪酬在线直播课程</a>
+											<span class="clearfix online__info">
+											<span class="fl online__info-price">¥900.00</span>
+											<span class="fr online__info-views">999次播放</span>
+										</span>
+											<button class="online__buy">立即购买</button>
+										</li>
+										<li class="online__item">
+											<a class="online__img" href="#">
+												<img src="/templets/xiaojs/img/cover.png" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+												<img class="fl online__star-head" src="img/avatar02.png" alt="" width="21" height="21">
+												<span class="online__star-name">漩涡鸣人</span>
+												<span class="online__star-items">
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+												</span>
+											</span>
+											</a>
+											<a href="#" class="online__title">企业人力资源管理师二级-薪酬在线直播课程</a>
+											<span class="clearfix online__info">
+											<span class="fl online__info-price">¥900.00</span>
+											<span class="fr online__info-views">999次播放</span>
+										</span>
+											<button class="online__buy">立即购买</button>
+										</li>
+										<li class="online__item">
+											<a class="online__img" href="#">
+												<img src="/templets/xiaojs/img/cover.png" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+												<img class="fl online__star-head" src="img/avatar02.png" alt="" width="21" height="21">
+												<span class="online__star-name">漩涡鸣人</span>
+												<span class="online__star-items">
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+													<i class="ico-star"></i>
+												</span>
+											</span>
+											</a>
+											<a href="#" class="online__title">企业人力资源管理师二级-薪酬在线直播课程</a>
+											<span class="clearfix online__info">
+											<span class="fl online__info-price">¥900.00</span>
+											<span class="fr online__info-views">999次播放</span>
+										</span>
+											<button class="online__buy">立即购买</button>
+										</li>-->
+									</ul>
+									<ul id="bdSeven92" class="clearfix online">
+										{dede:arclist addfields='trueprice,teacher' orderway='desc' orderby='pubdate' row='4' typeid='92' channelid='6'}
+										<li class="online__item">
+											<a class="online__img" href="[field:id function=getArcUrlById(@me)/]">
+												<img src="[field:litpic /]" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+														<img class="fl online__star-head" src="/templets/xiaojs/img/avatar02.png" alt="" width="21" height="21">
+														<span class="online__star-name">[field:click /]</span>
+														<span class="online__star-items">
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+														</span>
+													</span>
+											</a>
+											<a href="[field:id function=getArcUrlById(@me)/]" class="online__title">[field:title /]</a>
+											<span class="clearfix online__info">
+													<span class="fl online__info-price">¥[field:trueprice /]</span>
+													<span class="fr online__info-views">[field:click /]次播放</span>
+												</span>
+											<a href="[field:id function=getArcUrlById(@me)/]"><button class="online__buy">立即购买</button></a>
+										</li>
+										{/dede:arclist}
+									</ul>
+									<ul id="bdSeven93" class="clearfix online">
+										{dede:arclist addfields='trueprice,teacher' orderway='desc' orderby='pubdate' row='4' typeid='93' channelid='6'}
+										<li class="online__item">
+											<a class="online__img" href="[field:id function=getArcUrlById(@me)/]">
+												<img src="[field:litpic /]" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+														<img class="fl online__star-head" src="/templets/xiaojs/img/avatar02.png" alt="" width="21" height="21">
+														<span class="online__star-name">[field:click /]</span>
+														<span class="online__star-items">
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+														</span>
+													</span>
+											</a>
+											<a href="[field:id function=getArcUrlById(@me)/]" class="online__title">[field:title /]</a>
+											<span class="clearfix online__info">
+													<span class="fl online__info-price">¥[field:trueprice /]</span>
+													<span class="fr online__info-views">[field:click /]次播放</span>
+												</span>
+											<a href="[field:id function=getArcUrlById(@me)/]"><button class="online__buy">立即购买</button></a>
+										</li>
+										{/dede:arclist}
+									</ul>
+									<ul id="bdSeven94" class="clearfix online">
+										{dede:arclist addfields='trueprice,teacher' orderway='desc' orderby='pubdate' row='4' typeid='94' channelid='6'}
+										<li class="online__item">
+											<a class="online__img" href="[field:id function=getArcUrlById(@me)/]">
+												<img src="[field:litpic /]" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+														<img class="fl online__star-head" src="/templets/xiaojs/img/avatar02.png" alt="" width="21" height="21">
+														<span class="online__star-name">[field:click /]</span>
+														<span class="online__star-items">
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+														</span>
+													</span>
+											</a>
+											<a href="[field:id function=getArcUrlById(@me)/]" class="online__title">[field:title /]</a>
+											<span class="clearfix online__info">
+													<span class="fl online__info-price">¥[field:trueprice /]</span>
+													<span class="fr online__info-views">[field:click /]次播放</span>
+												</span>
+											<a href="[field:id function=getArcUrlById(@me)/]"><button class="online__buy">立即购买</button></a>
+										</li>
+										{/dede:arclist}
+									</ul>
+									<ul id="bdSeven95" class="clearfix online">
+										{dede:arclist addfields='trueprice,teacher' orderway='desc' orderby='pubdate' row='4' typeid='95' channelid='6'}
+										<li class="online__item">
+											<a class="online__img" href="[field:id function=getArcUrlById(@me)/]">
+												<img src="[field:litpic /]" alt="" width="170" height="112">
+												<span class="clearfix online__star">
+														<img class="fl online__star-head" src="/templets/xiaojs/img/avatar02.png" alt="" width="21" height="21">
+														<span class="online__star-name">[field:click /]</span>
+														<span class="online__star-items">
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+															<i class="ico-star"></i>
+														</span>
+													</span>
+											</a>
+											<a href="[field:id function=getArcUrlById(@me)/]" class="online__title">[field:title /]</a>
+											<span class="clearfix online__info">
+													<span class="fl online__info-price">¥[field:trueprice /]</span>
+													<span class="fr online__info-views">[field:click /]次播放</span>
+												</span>
+											<a href="[field:id function=getArcUrlById(@me)/]"><button class="online__buy">立即购买</button></a>
+										</li>
+										{/dede:arclist}
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="fr bd-seven-right">
+							<div class="clearfix zk-title">
+								<h3 class="fl">课程试听</h3>
+								<a href="{dede:type typeid='90'}[field:typelink /]{/dede:type}" class="fr zk-title-more">更多</a>
+							</div>
+							<ul class="libraryInfo">
+								{dede:arclist getall='1' addfields='trueprice,teacher' flag='kcst' orderway='desc' orderby='pubdate' row='5' typeid='90' channelid='6'}
+									<li>
+										<a class="nobr" href="[field:id function=getArcUrlById(@me)/]">[field:title/]</a>
+										<button class="fr">试听</button>
+									</li>
+								{/dede:arclist}
+								<!--<li>
+									<a class="nobr" href="#">快捷回复可接受的返回键款到发货较好的冯绍峰股东会</a>
+									<button class="fr">试听</button>
+								</li>
+								<li>
+									<a class="nobr" href="#">快捷回复可接受的返回键款到发货较好的冯绍峰股东会</a>
+									<button class="fr">试听</button>
+								</li>
+								<li>
+									<a class="nobr" href="#">快捷回复可接受的返回键款到发货较好的冯绍峰股东会</a>
+									<button class="fr">试听</button>
+								</li>
+								<li>
+									<a class="nobr" href="#">快捷回复可接受的返回键款到发货较好的冯绍峰股东会</a>
+									<button class="fr">试听</button>
+								</li>
+								<li>
+									<a class="nobr" href="#">快捷回复可接受的返回键款到发货较好的冯绍峰股东会</a>
+									<button class="fr">试听</button>
+								</li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 第八块 -->
+				<div class="bd-eight">
+					<h3 class="fz18">创富优势<span class="fz14">我们始终秉承“一切以用户为中心”的发展理念。以互联网为纽带，帮助每个够有志者实现自己的梦想，实现你我共赢。</span></h3>
+					<div class="advantage_cont">
+						<div class="advantage left_top">
+							<h4>在线模考</h4>
+							<p class="morenobr">海量全身模拟试题全面覆盖各类考点记录每次模考过程并汇总错题供反复演练.</p>
+						</div>
+						<div class="advantage left_bottom">
+							<h4>专业名师</h4>
+							<p class="morenobr">业内名师,系统讲解大纲知识点突出重点、难点,紧跟命题方向透彻解析教材!</p>
+						</div>
+						<div class="advantage right_top">
+							<h4>免费下载</h4>
+							<p class="morenobr">课程视频免费下载,配套课程讲义,方便学员灵活安排学习时间.</p>
+						</div>
+						<div class="advantage right_bottom">
+							<h4>品质课程</h4>
+							<p class="morenobr">科学教学规划,采用多班次的渐进式教学体系,让学习层层递进,稳步锁分!</p>
+						</div>
+						<div class="img">
+							<img src="/templets/xiaojs/img/advantage.png" alt="" />
+						</div>
+					</div>
+				</div>
+				<!-- 第九块-->
+				<div class="bd-nine clearfix">
+					<div class="fl">
+						<div class="clearfix zk-title">
+							<h2 class="fl">创富学校</h2>
+						</div>
+						<div class="school">
+							<img src="/templets/xiaojs/img/dynamic01.png" alt="" width="600" height="330">
+							<span class="bd-nine-note">
+							<p><strong>创富</strong>管理咨询职业培训学校是重庆市最早开展国家职业资格证书全国统一考试的培训机构，几年连续蝉联重庆地区资格证书培训最具影响力品牌。</p>
+							<p class="address">地址：重庆市渝中区 两路口文化宫内创富文化教育集团<br />
+								联系方式：023-63606865<br />
+								<span>023-63606864</span>
+								<span>17723166962</span>
+							</p>
+						</span>
+						</div>
+					</div>
+					<div class="fl">
+						<div class="clearfix zk-title">
+							<h2 class="fl" style="margin-left:10px;">学校风采</h2>
+							<a href="{dede:type typeid='55'}[field:typelink /]{/dede:type}" class="fr zk-title-more">更多</a>
+						</div>
+						<ul>
+							{dede:loop table='#@__archives' if="typeid=55" sort='pubdate' orderway='desc' row=4}
+							<li>
+								<a href="[field:id function=getArcUrlById(@me)/]">
+									<img src="[field:litpic/]" alt="" width="290" height="160">
+									<span class="bd-eight-note">[field:title/]</span>
+								</a>
+							</li>
+							{/dede:loop}
+							<!--<li>
+								<a href="#">
+									<img src="/templets/xiaojs/img/dynamic02.png" alt="" width="290" height="160">
+									<span class="bd-nine-note">现场培训</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="/templets/xiaojs/img/dynamic03.png" alt="" width="290" height="160">
+									<span class="bd-nine-note">工作人员值班</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="/templets/xiaojs/img/dynamic04.png" alt="" width="290" height="160">
+									<span class="bd-nine-note">专题讲座</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="/templets/xiaojs/img/dynamic05.png" alt="" width="290" height="160">
+									<span class="bd-nine-note">学员活动</span>
+								</a>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- end content -->
+
+			<!-- start footer  (CV大法)-->
+			{dede:include filename="footer.htm"/}
+			<!-- end footer -->
+		</div>
+
+		<script>
+			$(".orgLunbo").slide({
+				titCell:".lunboDot ul", 
+				mainCell:".lunboImg ul", 
+				effect:"leftLoop", 
+				vis:"auto", 
+				autoPlay:true, 
+				autoPage:"<li></li>", 
+				titOnClassName:"dot",
+				trigger:"click"
+			});
+		
+		</script>
+	</body>
+</html>

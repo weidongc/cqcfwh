@@ -1,0 +1,195 @@
+body {
+    &>.container {
+        >div:not(.header) {
+            width: 100%;
+            min-width: 1200px;
+            >div {
+                width: 1200px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+.banner1_box{
+    background: url(../img/teacher_banner1.png) no-repeat center top;
+    height: 700px;
+    .banner1{
+        width: 1200px;
+        height: 700px;
+    }
+}
+.banner2_box{
+    background: url(../img/teacher_banner2.png) no-repeat center top;
+    height: 800px;
+    .banner2{
+        width: 1200px;
+        height: 800px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 680px;
+            left: 360px;
+            width: 478px;
+            height: 70px;
+        }
+    }
+}
+.banner3_box{
+    background-color: #fff;
+    height: 532px;
+    .banner3{
+        background: url(../img/teacher_banner3.png) no-repeat center top;
+        width: 1200px;
+        height: 532px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 237px;
+            width: 120px;
+            height: 32px;
+        }
+        a:nth-child(1){
+            left: 239px;
+        }
+        a:nth-child(2){
+            left: 639px;
+        }
+        a:nth-child(3){
+            left: 1039px;
+        }
+    }
+}
+.banner4_box{
+    background-color: #005580;
+    height: 699px;
+    .banner4{
+        background: url(../img/teacher_banner4.png) no-repeat center top;
+        width: 1200px;
+        height: 699px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 531px;
+            left: 13px;
+            width: 586px;
+            height: 100px;
+        }
+    }
+}
+.banner5_box{
+    background-color: #f1b153;
+    height: 1098px;
+    .banner5{
+        background: url(../img/teacher_banner5.png) no-repeat center top;
+        width: 1200px;
+        height: 1098px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 974px;
+            left: 430px;
+            width: 338px;
+            height: 71px;
+        }
+    }
+}
+.banner6_box{
+    background: #fff;
+    height: 510px;
+    .banner6{
+        background: url(../img/teacher_banner6.png) no-repeat center top;
+        width: 1200px;
+        height: 510px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 404px;
+            left: 486px;
+            width: 480px;
+            height: 72px;
+        }
+    }
+}
+.banner7_box{
+    background-color: #ffbd5d;
+    height: 1097px;
+    .banner7{
+        background: url(../img/teacher_banner7.png) no-repeat center top;
+        width: 1200px;
+        height: 1097px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 970px;
+            left: 445px;
+            width: 340px;
+            height: 73px;
+        }
+    }
+}
+.banner8_box{
+    background-color: #6bd9cc;
+    height: 707px;
+    .banner8{
+        background: url(../img/teacher_banner8.png) no-repeat center top;
+        width: 1200px;
+        height: 707px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 584px;
+            left: 418px;
+            width: 365px;
+            height: 72px;
+        }
+    }
+}
+.banner9_box{
+    background-color: #d10009;
+    height: 761px;
+    .banner9{
+        background: url(../images/banner9.png) no-repeat center top;
+        width: 1200px;
+        height: 761px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 641px;
+            left: 460px;
+            width: 280px;
+            height: 60px;
+        }
+    }
+}
+.banner10_box{
+    background: url(../images/banner10.png);
+    width:100%;
+    height: 507px;
+    position: relative;
+    .banner10{
+        width: 1200px;
+        height: 507px;
+        margin:0 auto;
+        background-image: url(../images/banner10_1.png);
+        padding: 169px 220px;
+        font-size: 24px;
+        color: #fff;
+        position: relative;
+        a{
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                color: #d10009;
+                text-decoration: underline;
+            }
+            &.more{
+                position: absolute;
+                top: 255px;
+                left: 460px;
+                width: 280px;
+                height: 60px;
+            }
+        }
+    }
+}
