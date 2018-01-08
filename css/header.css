@@ -215,6 +215,7 @@ div#right_QR p{
 
 .hd-nav .nav .dropdown__items li {
     color: #fff;
+    text-align: center;
 }
 
 .hd-nav .nav .dropdown__items li:hover {

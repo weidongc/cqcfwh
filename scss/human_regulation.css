@@ -1,0 +1,9 @@
+body > .container > div:not(.header) {
+  width: 100%;
+}
+
+body > .container > div:not(.header) > div {
+  width: 1200px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=human_regulation.css.map */

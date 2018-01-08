@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAES,IAFL,GACE,UAAU,GACP,GAAG,AAAA,IAAK,CAAA,AAAA,OAAO,EAAE;EACd,KAAK,EAAE,IAAI;CAKd;;AART,AAIa,IAJT,GACE,UAAU,GACP,GAAG,AAAA,IAAK,CAAA,AAAA,OAAO,IAEX,GAAG,CAAC;EACD,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,MAAM;CACjB",
+    "sources": [
+        "human_regulation.scss"
+    ],
+    "names": [],
+    "file": "human_regulation.css"
+}
