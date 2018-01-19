@@ -66,6 +66,7 @@ div.banner ul.swiper-pagination > li.swiper-pagination-bullet.swiper-pagination-
 }
 
 .c1 {
+  padding-top: 30px;
   height: 700px;
 }
 
@@ -79,46 +80,92 @@ div.banner ul.swiper-pagination > li.swiper-pagination-bullet.swiper-pagination-
   display: block;
   width: 280px;
   height: 180px;
+  position: relative;
 }
 
 .c1 > div:first-child a > img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 280px;
   height: 180px;
 }
 
-.c1 > div:first-child a:first-child {
+.c1 > div:first-child a > div {
+  display: none;
+}
+
+.c1 > div:first-child a:hover > div {
+  display: block;
+}
+
+.c1 > div:first-child a:hover > img {
+  display: none;
+}
+
+.c1 > div:first-child a {
   font-size: 12px;
-  background-color: #ff9d1e;
   padding: 20px 10px 10px;
 }
 
-.c1 > div:first-child a:first-child p {
+.c1 > div:first-child a p {
   color: #fff;
 }
 
-.c1 > div:first-child a:first-child h5 {
+.c1 > div:first-child a h5 {
   font-size: 14px;
   color: #333;
   font-weight: bold;
   margin-top: 8px;
 }
 
-.c1 > div:first-child a:first-child h6 {
+.c1 > div:first-child a h6 {
   font-size: 12px;
   color: #333;
   margin-top: 1px;
 }
 
-.c1 > div:first-child a:first-child button {
+.c1 > div:first-child a button {
   display: block;
   width: 120px;
   height: 28px;
   margin: 0 auto;
-  color: #ff9d1e;
   background-color: #fff;
   line-height: 28px;
   border-radius: 5px;
   margin-top: 15px;
+}
+
+.c1 > div:first-child a:nth-child(1) {
+  background-color: #ff9d1e;
+}
+
+.c1 > div:first-child a:nth-child(1) button {
+  color: #ff9d1e;
+}
+
+.c1 > div:first-child a:nth-child(2) {
+  background-color: #ff4657;
+}
+
+.c1 > div:first-child a:nth-child(2) button {
+  color: #ff4657;
+}
+
+.c1 > div:first-child a:nth-child(3) {
+  background-color: #33a905;
+}
+
+.c1 > div:first-child a:nth-child(3) button {
+  color: #33a905;
+}
+
+.c1 > div:first-child a:nth-child(4) {
+  background-color: #0a5bae;
+}
+
+.c1 > div:first-child a:nth-child(4) button {
+  color: #0a5bae;
 }
 
 .c1 .c1_2 {

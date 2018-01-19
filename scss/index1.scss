@@ -61,6 +61,7 @@ div.banner{
     }
 }
 .c1 {
+    padding-top: 30px;
     height: 700px;
     >div:first-child {
         height: 180px;
@@ -70,14 +71,26 @@ div.banner{
             display: block;
             width: 280px;
             height: 180px;
+            position: relative;
             >img {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 280px;
                 height: 180px;
             }
+            >div{
+                display: none;
+            }
+            &:hover>div{
+                display: block;
+            }
+            &:hover>img{
+                display: none;
+            }
         }
-        a:first-child {
+        a{
             font-size: 12px;
-            background-color: #ff9d1e;
             padding: 20px 10px 10px;
             p {
                 color: #fff;
@@ -98,11 +111,34 @@ div.banner{
                 width: 120px;
                 height: 28px;
                 margin: 0 auto;
-                color: #ff9d1e;
                 background-color: #fff;
                 line-height: 28px;
                 border-radius: 5px;
                 margin-top: 15px;
+            }
+        }
+        a:nth-child(1) {
+            background-color: #ff9d1e;
+            button{
+                color: #ff9d1e;
+            }
+        }
+        a:nth-child(2) {
+            background-color: #ff4657;
+            button{
+                color: #ff4657;
+            }
+        }
+        a:nth-child(3) {
+            background-color: #33a905;
+            button{
+                color: #33a905;
+            }
+        }
+        a:nth-child(4) {
+            background-color: #0a5bae;
+            button{
+                color: #0a5bae;
             }
         }
     }
